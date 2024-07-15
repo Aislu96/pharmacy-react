@@ -1,0 +1,142 @@
+@import "vars";
+@import "mixin";
+
+.container {
+  margin: 0 auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+input {
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+input[type="text"]::placeholder {
+  color: $colorGreyFour;
+}
+
+.inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.logo:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+img {
+  object-fit: cover;
+}
+h1 {
+  font-size: 50px;
+  font-weight: $fontWeightRegular;
+  line-height: 60.95px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: $fontWeightMedium;
+  line-height: 44.8px;
+}
+
+.text-xsmall {
+  font-family: "Nokora", sans-serif;
+  font-size: 10px;
+  font-weight: $fontWeightBold;
+  line-height: 13.22px;
+}
+
+.text-xs {
+  font-size: 12px;
+  font-weight: $fontWeightSemiBold;
+  line-height: 14.63px;
+}
+
+.text-small {
+  font-size: 14px;
+  font-weight: $fontWeightRegular;
+  line-height: 17.07px;
+}
+
+.text-medium {
+  font-size: 16px;
+  font-weight: $fontWeightMedium;
+  line-height: 19.5px;
+}
+
+.text-large {
+  font-size: 24px;
+  font-weight: $fontWeightRegular;
+  line-height: 29.26px;
+}
+
+.icon {
+  padding: 10px;
+  margin: 0 auto;
+  width: 44px;
+  height: 44px;
+  background-color: $colorGreenTwo;
+  @include flex-center;
+  border-radius: 100px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $colorGreen;
+  }
+
+  &:active {
+    background-color: $colorGreenTen;
+  }
+
+  &:disabled {
+    background-color: $colorGreyTwo;
+  }
+}
+
+
+.group {
+  z-index: 20;
+  position: fixed;
+  @include flex-column;
+  @include gap(8px);
+  top: 83%;
+  right: 5%;
+
+  &__icon {
+    cursor: pointer;
+    box-shadow: 1.04px 4.15px 4.15px 0 #D0CCCA;
+    @include flex-center;
+    width: 56px;
+    height: 56px;
+    border-radius: 51.89px;
+    background-color: $colorGreyTwo;
+
+    img {
+      object-fit: contain;
+      width: 30px;
+      height: 30px;
+    }
+
+    &:first-child {
+      display: none;
+    }
+
+    &:last-child {
+      background-color: $colorOrangeTwo;
+    }
+  }
+}
+
+.text-circle {
+  width: fit-content;
+  font-weight: $fontWeightSemiBold;
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background-color: $colorWhite;
+  border: 1px solid $colorGreyTwo;
+  border-radius: 54px;
+}

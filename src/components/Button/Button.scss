@@ -1,0 +1,114 @@
+@import "../../scss/vars";
+@import "../../scss/mixin";
+
+.button {
+  white-space: nowrap;
+  position: relative;
+  @include flex-center;
+  color: $colorGrey;
+  background-color: $colorOrangeThree;
+  @include borderBtn;
+  @include flex-row;
+  @include gap(8px);
+  padding: 0 16px;
+  height: 44px;
+  cursor: pointer;
+  border: 0;
+
+  &:hover {
+    background-color: $colorOrange;
+
+    .button-img {
+      width: 33px;
+      height: 32px;
+      top: -7px;
+      right: -12px;
+    }
+  }
+
+  &:active {
+    background-color: $colorOrangeFour;
+  }
+
+  &-img {
+    box-shadow: 0 0 2px 0 #4B4B4B3D;
+    top: -6px;
+    right: -5px;
+    border-radius: 100px;
+    position: absolute;
+    width: 27px;
+    height: 26px;
+    @include flex-center;
+    background-color: $colorWhite;
+  }
+}
+
+.button--accent {
+  width: fit-content;
+  position: relative;
+  color: $colorGrey;
+  padding: 0 24px;
+  background-color: $colorGreenSeven;
+
+  &:hover {
+    background-color: $colorGreenEight;
+
+    .button-img {
+      width: 33px;
+      height: 32px;
+      top: -7px;
+      right: -12px;
+    }
+  }
+
+  &:active {
+    background-color: $colorGreenNine;
+  }
+
+  &:disabled {
+    background-color: $colorGreyTwo;
+  }
+}
+
+
+.button--highlight {
+  border: 1px solid $colorBlackFour;
+  background-color: $colorWhite;
+  color: $colorBlackFour;
+
+  &:hover {
+    border: 0;
+    background-color: $colorBlackThree;
+    color: $colorWhite;
+  }
+
+  &:active {
+    border: 0;
+    background-color: $colorBlackFour;
+    color: $colorWhite;
+  }
+}
+
+.swiper__button, .video__swiper {
+  box-shadow: 0 2px 15px 0 #00000033;
+  border-radius: 71px;
+  width: 44px;
+  height: 44px;
+  background-image: url("../../images/arrowUp.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $colorGreenFour;
+
+  &_next {
+    transform: rotate(90deg);
+  }
+
+  &_prev {
+    transform: rotate(-90deg);
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $colorGreenTwo;
+  }
+}

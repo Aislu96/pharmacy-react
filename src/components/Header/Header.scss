@@ -1,0 +1,150 @@
+@import "../../scss/vars";
+@import "../../scss/mixin";
+.header {
+  &__container {
+    background-color: $colorWhite;
+    border-radius: 0 0 32px 32px;
+  }
+
+  &__inner {
+    @include flex-column;
+    @include gap(24px);
+  }
+
+  &__list {
+    @include flex-row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      white-space: nowrap;
+    }
+  }
+
+  &__actions {
+    @include flex-row;
+    @include gap(20px);
+  }
+
+  &__link {
+    @include flex-row;
+    @include gap(10px);
+    align-items: center;
+  }
+
+  &__item {
+    padding: 8px 16px;
+    cursor: pointer;
+
+    &-circle {
+      background-color: transparent;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+    }
+
+    &:not(:last-child) {
+      &:hover {
+        border-radius: 54px;
+        border: 1px solid $colorGreyTwo;
+
+        .header__item-circle {
+          background-color: $colorOrangeTwo;
+        }
+      }
+    }
+  }
+
+
+  span {
+    margin-left: 10px;
+    text-decoration: underline;
+  }
+}
+
+
+
+.user-actions, .search-form {
+  @include flex-row;
+  justify-content: space-between;
+}
+
+.user-actions {
+  display: flex;
+  justify-content: space-between;
+
+  &__stick {
+    position: absolute;
+    right: 25px;
+    @include flex-center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $colorWhite;
+    background-color: $colorBlackThree;
+    color: $colorWhite;
+    border-radius: 100px;
+
+    span {
+      margin-top: 2px;
+      text-decoration: none;
+      margin-left: 0;
+    }
+  }
+
+  &__item {
+    width: 99px;
+    flex: 1;
+    text-align: center;
+
+    p {
+      color: $colorGreyThree;
+    }
+  }
+
+  &__link {
+    @include gap(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(1) {
+      position: relative;
+    }
+  }
+}
+
+
+.search-form {
+  flex: 2;
+  @include flex-row;
+  @include gap(10px);
+
+  &__container {
+    flex: 2;
+    @include flex-row;
+    border-radius: 24px;
+    height: 44px;
+    border: 1px solid $colorOrangeTwo;
+  }
+  &__input {
+    flex: 2;
+    font-size: 16px;
+    font-weight: $fontWeightMedium;
+    line-height: 19.5px;
+    margin: 12px 16px;
+    caret-color: transparent;
+
+    &:focus {
+      border-left: 2px solid $colorBlackThree;
+
+      & + .button {
+        background-color: $colorOrange;
+      }
+    }
+
+    &.has-text:focus {
+      border-left: none;
+    }
+  }
+}

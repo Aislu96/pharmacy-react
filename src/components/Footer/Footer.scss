@@ -1,0 +1,92 @@
+@import "../../scss/vars";
+@import "../../scss/mixin";
+
+.footer {
+  &__inner {
+    @include flex-column;
+    @include gap(34px);
+  }
+
+  &__block {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icons {
+    margin-right: 132px;
+    @include flex-row;
+    @include gap(32px);
+  }
+
+  &__icon {
+    cursor: pointer;
+    svg {
+      border-radius: 100px;
+      width: 41px;
+      height: 41px;
+
+      &:hover {
+        box-shadow: 2px 8px 8px 0 #D0CCCA;
+      }
+    }
+  }
+
+  span {
+    text-decoration: underline;
+  }
+
+  &__container {
+    background-color: $colorWhite;
+    border-radius: 32px 32px 0 0;
+    padding-top: 44px;
+    padding-bottom: 32px;
+  }
+
+  &__nav {
+    font-weight: $fontWeightSemiBold;
+    @include flex-row;
+    @include gap(44px);
+  }
+
+  &__element {
+    @include flex-row;
+    @include gap(24px);
+
+    p {
+      &:first-child {
+        max-width: 118px;
+        width: 100%;
+        font-weight: $fontWeightSemiBold;
+      }
+
+      &:last-child {
+        max-width: 263px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__group {
+    @include flex-column;
+    @include gap(24px);
+  }
+
+  &__text {
+    max-width: 175px;
+    width: 100%;
+    color: $colorBlackThree;
+  }
+
+  &__list {
+    text-decoration: underline;
+
+    &:hover {
+      color: $colorOrange;
+    }
+
+    &:active {
+      color: $colorOrangeFour;
+    }
+  }
+}

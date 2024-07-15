@@ -1,0 +1,63 @@
+@import "../../scss/vars";
+@import "../../scss/mixin";
+
+.articles {
+  &__container {
+    position: relative;
+    background-color: $colorOrangeFive;
+    padding-top: 56px;
+    padding-bottom: 0;
+    z-index: 0;
+  }
+
+  &__group {
+    @include flex-row;
+    justify-content: space-between;
+    padding-bottom: 34px;;
+  }
+
+  &__swiper {
+    margin: 0;
+  }
+
+  &__blocks {
+    @include flex-row;
+    @include gap(34px)
+  }
+
+  &__block {
+    margin-top: 32px;
+    background-color: $colorWhite;
+    padding: 32px 44px 32px 44px;
+    border-radius: 32px 32px 0 0;
+    width: 400px !important;
+    @include flex-column;
+    @include gap(16px);
+    cursor: pointer;
+
+    &:hover {
+      margin-top: 0;
+      padding-bottom: 64px;
+
+      .articles__text-circle {
+        background-color: $colorYellow;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: $fontWeightSemiBold;
+  }
+
+  &__img {
+    width: 100%;
+    position: absolute;
+    top: 13%;
+    right: 0;
+    z-index: -1;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../scss/mixin";
+@import "../../scss/vars";
+
+.App {
+  font-family: 'Montserrat', sans-serif;
+  background-color: $colorGrey;
+  color: $colorBlack;
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+  font-weight: $mainFontWeight;
+  margin: 0 auto;
+  min-width: 375px;
+  max-width: 1920px;
+  @include flex-column;
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden;
+}

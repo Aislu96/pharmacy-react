@@ -1,0 +1,42 @@
+@import "./vars";
+@mixin flex-row() {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin font($minFont, $difference, $differenceHeight, $minHeight, $maxHeight) {
+  font-size: calc(#{$minFont} + #{$difference} * (100vw - 375px) / (1440 - 375));
+  line-height: clamp(#{$minHeight}, calc(#{$minHeight} + #{$differenceHeight} * ((100vw - 375px) / (1440 - 375))), #{$maxHeight});
+}
+
+
+@mixin gap($gap) {
+  gap: $gap;
+}
+
+
+@mixin borderBtn {
+  border-radius: 24px;
+}
+
+
+@mixin gradientBorder {
+  background: linear-gradient($colorGreenFour, $colorGreenFour) padding-box,
+  linear-gradient(158.64deg, #A8AD02 16.05%, #FFFFFF 43.76%, #DBE021 85.16%) border-box;
+}
+
+@mixin gradientBorderHover {
+  background: linear-gradient($colorGreenFive, $colorGreenFive) padding-box,
+  linear-gradient(158.64deg, #A8AD02 16.05%, #FFFFFF 43.76%, #DBE021 85.16%) border-box;
+}
