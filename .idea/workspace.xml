@@ -28,7 +28,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
-    "last_opened_file_path": "C:/Users/arsla/WebstormProjects/pharmacy-react/src/images/video",
+    "last_opened_file_path": "C:/Users/arsla/WebstormProjects/pharmacy-react/src/vendor/fonts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -39,11 +39,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\arsla\WebstormProjects\pharmacy-react\src\vendor\fonts" />
       <recent name="C:\Users\arsla\WebstormProjects\pharmacy-react\src\images\video" />
       <recent name="C:\Users\arsla\WebstormProjects\pharmacy-react\src\images\present" />
       <recent name="C:\Users\arsla\WebstormProjects\pharmacy-react\src\images\mainProduct" />
       <recent name="C:\Users\arsla\WebstormProjects\pharmacy-react\src\images\articles" />
-      <recent name="C:\Users\arsla\WebstormProjects\pharmacy-react\src\images\banner" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\arsla\WebstormProjects\pharmacy-react\src\images\questions" />
@@ -76,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721027897129</updated>
-      <workItem from="1721027898178" duration="25070000" />
+      <workItem from="1721027898178" duration="27079000" />
     </task>
     <servers />
   </component>

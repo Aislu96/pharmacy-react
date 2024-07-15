@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 import './Prebiotics.scss';
+import {Navigation, Pagination} from "swiper/modules";
 
 
 import branchThree from '../../images/branchThree.svg';
@@ -12,6 +13,7 @@ import Button from "../Button/Button";
 function Prebiotics() {
     useEffect(() => {
         new Swiper(".swiper-prebiotics", {
+            modules: [Pagination, Navigation],
             loop: false,
             slidesPerView: 2.5,
             spaceBetween: 20,

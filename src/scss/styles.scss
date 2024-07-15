@@ -130,6 +130,17 @@ h2 {
   }
 }
 
+
+.link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: $colorOrangeThree;
+
+  &:hover {
+    color: $colorOrange;
+  }
+}
+
 .text-circle {
   width: fit-content;
   font-weight: $fontWeightSemiBold;
@@ -139,4 +150,13 @@ h2 {
   background-color: $colorWhite;
   border: 1px solid $colorGreyTwo;
   border-radius: 54px;
+}
+
+
+.questions__swiper {
+  justify-content: center;
+  z-index: 1;
+  @include flex-row;
+  position: relative;
+  height: 44px;
 }
