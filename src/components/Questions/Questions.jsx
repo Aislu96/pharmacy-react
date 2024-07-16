@@ -36,6 +36,7 @@ function Questions() {
                     if (index < 3) {
                         return "<span class=\"" + className + "\">" + (index + 1) + "</span>";
                     } else if (index === 3) {
+                        // eslint-disable-next-line no-useless-concat
                         return "<span class=\"" + className + "\">" + "..." + "</span>";
                     } else {
                         return "";

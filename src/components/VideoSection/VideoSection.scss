@@ -1,0 +1,175 @@
+@import "../../scss/vars";
+@import "../../scss/mixin";
+.video {
+    .swiper-slide {
+        width: 207px !important;
+    }
+
+    &__blocks {
+        position: relative;
+        margin-left: 26px;
+        margin-right: 26px;
+    }
+
+    &__banners {
+        @include flex-row;
+    }
+
+    &__button {
+        position: relative;
+    }
+
+    &__banner {
+        cursor: pointer;
+        position: relative;
+        padding-bottom: 40.32%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../images/video/imgVideo.png");
+        border-radius: 16px;
+
+        &-group {
+            cursor: pointer;
+            box-shadow: -4px 4px 19px 0px #75777166;
+            width: 207px;
+            border-radius: 8px;
+
+            p {
+                background-color: $colorYellow;
+                border-radius: 0 0 8px 8px;
+                padding: 5.5px 10px;
+            }
+
+            &:active {
+                border: 3px solid $colorGreen;
+            }
+        }
+
+        &_one {
+            height: 120px;
+            position: relative;
+            background-image: url("../../images/video/biovestine.svg");
+        }
+    }
+
+    &__container-triangle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include flex-center;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background-color: $colorWhite;
+        transition: opacity 0.5s ease-in 0s;
+        &_non-active {
+            opacity: 0;
+        }
+    }
+
+    &__container-img {
+        @include flex-center;
+        width: 32px;
+        height: 32px;
+        background-color: $colorOrangeThree;
+        border-radius: 100px;
+
+        img {
+            width: 12px;
+            height: 16px;
+        }
+
+        &_one {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 33px;
+            height: 33px;
+
+            img {
+                width: 8px;
+                height: 8px;
+            }
+        }
+    }
+
+    &__play {
+        display: none;
+
+        &-one {
+            display: none;
+        }
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &__group {
+        padding: 16px 44px;
+        @include flex-column;
+        @include gap(16px);
+        border-radius: 16px;
+        background-color: $colorWhite;
+
+        &-two {
+            p {
+                padding-bottom: 16px;
+                border-bottom: 1px solid $colorGreyTwo;
+            }
+        }
+    }
+
+    &__groups-one {
+        overflow: hidden;
+        @include flex-column;
+        @include gap(24px);
+        flex: 1.5;
+    }
+
+    &__groups-two {
+        box-shadow: -4px 4px 19px 0px #75777166;
+        @include gap(16px);
+        flex: 1;
+        @include flex-column;
+        background-color: $colorWhite;
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    &__groups {
+        margin-top: 24px;
+        @include flex-row;
+        @include gap(24px);
+    }
+
+    &__text-circle {
+        border-radius: 24px;
+        border: 1px solid transparent;
+        background: linear-gradient($colorGreenFour, $colorGreenFour) padding-box,
+        linear-gradient(158.64deg, #A8AD02 16.05%, #FFFFFF 43.76%, #DBE021 85.16%) border-box;
+    }
+}
+
+.video__swiper {
+    &_prev {
+        z-index: 3;
+        left: -22px;
+        position: relative;
+        top: 40%;
+    }
+
+    &_next {
+        z-index: 2;
+        right: -22px;
+        top: 40%;
+        position: absolute;
+    }
+}

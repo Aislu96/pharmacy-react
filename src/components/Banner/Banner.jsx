@@ -13,6 +13,7 @@ import connection from '../../images/banner/connection.svg';
 import arrowUp from '../../images/banner/arrowUp.svg';
 import chat from '../../images/banner/chat.svg';
 import Button from "../Button/Button";
+// import stroke from '../../images/banner/stroke.svg';
 
 const Banner = () => {
     return (
@@ -26,6 +27,7 @@ const Banner = () => {
                 </div>
                 <div className="inner banner__inner">
                     <div className="banner__block">
+                        {/*<img className="banner__stroke" src={stroke} alt='stroke' />*/}
                         <h1>Жидкие пробиотики</h1>
                         <h1 className="banner__title">для здоровья кишечника</h1>
                         <div className="banner__btn">

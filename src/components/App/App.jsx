@@ -10,6 +10,7 @@ import Questions from "../Questions/Questions";
 import DeliveryTerms from "../DeliveryTerms/DeliveryTerms";
 import Boutique from "../Boutique/Boutique";
 import MainProduct from "../MainProduct/MainProduct";
+import VideoSection from "../VideoSection/VideoSection";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
             <FastMenu/>
             <Banner/>
             <Prebiotics/>
+            <VideoSection/>
             <MainProduct/>
             <Boutique/>
             <DeliveryTerms/>
