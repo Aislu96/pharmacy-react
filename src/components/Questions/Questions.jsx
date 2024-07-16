@@ -70,7 +70,7 @@ function Questions() {
         <section className="questions">
             <div className="container questions__container">
                 <div className="inner questions__inner">
-                    <span className="text-small text-circle">FAQ</span>
+                    <span className="text-small text-circle questions__text-small">FAQ</span>
                     <h2>Остались вопросы?</h2>
                     <div className="swiper">
                         <div className="swiper-wrapper">

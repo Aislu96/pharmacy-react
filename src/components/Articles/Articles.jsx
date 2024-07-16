@@ -48,7 +48,7 @@ function Articles() {
                     <img src={vector} alt="vector"/>
                 </div>
                 <div className="inner articles__inner">
-                    <span className="text-circle text-small">Научная база</span>
+                    <span className="text-circle text-small articles__text-small">Научная база</span>
                     <div className="articles__group">
                         <h2>Статьи и диссертации</h2>
                         <SwiperControls

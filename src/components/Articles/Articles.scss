@@ -44,6 +44,9 @@
       }
     }
   }
+  &__text-small {
+    background-color: $colorWhite;
+  }
 
   &__link {
     font-weight: $fontWeightSemiBold;

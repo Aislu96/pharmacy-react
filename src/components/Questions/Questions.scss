@@ -35,7 +35,9 @@
       font-weight: $fontWeightSemiBold;
     }
   }
-
+  &__text-small {
+    background-color: $colorWhite;
+  }
   &__body {
     background-color: $colorYellow;
     padding: 16px 24px 16px 180px;

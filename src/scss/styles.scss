@@ -73,6 +73,19 @@ h2 {
   line-height: 29.26px;
 }
 
+.text-large-two {
+  font-size: 24px;
+  font-weight: $fontWeightMedium;
+  line-height: 29.26px;
+}
+
+
+.text-extra-large {
+  font-size: 32px;
+  font-weight: $fontWeightMedium;
+  line-height: 39.01px;
+}
+
 .icon {
   padding: 10px;
   margin: 0 auto;
@@ -147,7 +160,7 @@ h2 {
   display: inline-block;
   margin-bottom: 16px;
   padding: 8px 16px;
-  background-color: $colorWhite;
+  background-color: transparent;
   border: 1px solid $colorGreyTwo;
   border-radius: 54px;
 }
@@ -168,7 +181,7 @@ h2 {
     margin-top: 32px;
     height: 44px;
   }
-  &_prebiotisc {
+  &_prebiotics {
     margin: 24px 0 16px;
     gap: 56px;
   }

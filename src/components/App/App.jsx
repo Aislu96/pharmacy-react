@@ -7,17 +7,23 @@ import Footer from "../Footer/Footer";
 import Articles from "../Articles/Articles";
 import Present from "../Present/Present";
 import Questions from "../Questions/Questions";
+import DeliveryTerms from "../DeliveryTerms/DeliveryTerms";
+import Boutique from "../Boutique/Boutique";
+import MainProduct from "../MainProduct/MainProduct";
 
 function App() {
     return (
         <div className="App">
             <Header/>
             <FastMenu/>
-            <Banner />
-            <Prebiotics />
-            <Questions />
-            <Present />
-            <Articles />
+            <Banner/>
+            <Prebiotics/>
+            <MainProduct/>
+            <Boutique/>
+            <DeliveryTerms/>
+            <Questions/>
+            <Present/>
+            <Articles/>
             <Footer/>
         </div>
     );

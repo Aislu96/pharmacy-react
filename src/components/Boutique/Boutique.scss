@@ -1,0 +1,101 @@
+@import "../../scss/vars";
+@import "../../scss/mixin";
+
+.boutique {
+  &__catalog {
+    @include flex-row;
+    color: $colorOrangeThree;
+    font-weight: $fontWeightSemiBold;
+    margin-top: 64px;
+    margin-right: 20px;
+    text-align: right;
+    @include gap(20px);
+    justify-content: end;
+    cursor: pointer;
+
+    img {
+      transform: rotate(-90deg)
+    }
+
+    &__img-drug {
+      @include flex-center;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__container {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  &__inner {
+    position: relative;
+    padding: 201px 0 56px 0;
+    @include flex-column;
+    border-radius: 263px 248px 24px 24px;
+    gap: 26px;
+    background-color: $colorWhite;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__block {
+    @include flex-column;
+    padding-right: 44px;
+    padding-left: 44px;
+    @include gap(16px);
+
+    p {
+      color: $colorIcon;
+    }
+  }
+
+  &__list {
+    padding-right: 44px;
+    padding-left: 44px;
+    @include flex-row;
+    @include gap(16px);
+    margin-top: 32px;
+    margin-bottom: 26px;
+  }
+
+  &__item {
+    border-radius: 100px;
+    border: 1px solid $colorGreyTwo;
+    padding: 8px 16px;
+    cursor: pointer;
+
+    &_hover {
+      background-color: $colorYellow;
+    }
+
+    &:hover {
+      background-color: $colorYellow;
+    }
+
+    &:active {
+      background-color: $colorGreen;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: -22px;
+    left: 20px;
+    max-width: 248px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 295px));
+  @include gap(20px);
+}

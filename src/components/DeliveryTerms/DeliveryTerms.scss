@@ -1,0 +1,69 @@
+@import "../../scss/vars";
+@import "../../scss/mixin";
+
+.delivery-terms {
+  &__price {
+    background-color: $colorYellowTwo;
+    padding: 8px;
+    border-radius: 54px;
+    @include flex-center;
+  }
+
+  &__group-img {
+    width: 23px;
+    height: 23px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__inner {
+    @include gap(44px);
+    border-radius: 24px;
+    padding: 24px 16px;
+    background-color: $colorYellow;
+    @include flex-row;
+  }
+
+  &__group {
+    font-weight: $fontWeightSemiBold;
+    align-items: center;
+    white-space: nowrap;
+    border-radius: 54px;
+    background-color: $colorWhite;
+    @include flex-row;
+    @include gap(16px);
+    padding: 8px 16px;
+    border: 1px solid $colorGreyTwo;
+  }
+
+  &__text {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: $fontWeightSemiBold;
+  }
+
+  &__img {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: $colorGreenTwo;
+  }
+
+  &__blocks {
+    flex: 2;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(207px, 1fr));
+    @include gap(16px);
+  }
+
+  &__block {
+    align-items: center;
+    @include flex-row;
+    @include gap(8px);
+  }
+}

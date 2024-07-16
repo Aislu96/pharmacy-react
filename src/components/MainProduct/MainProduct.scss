@@ -1,0 +1,178 @@
+@import "../../scss/vars";
+@import "../../scss/mixin";
+
+.main-product {
+  &__container {
+    position: relative;
+  }
+  &__image-one {
+    position: absolute;
+    top: 140px;
+    right: 0;
+  }
+  &__image-two {
+    position: absolute;
+    top: 158px;
+    left: 40%;
+    transform: rotate(90deg);
+  }
+  &__inner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__reviews {
+    margin-bottom: 16px;
+  }
+
+  &__group {
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 44px;
+  }
+
+  &__button {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  &__blocks {
+    margin-bottom: 65px;
+  }
+
+  &__cards {
+    display: grid;
+    @include gap(21px);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-bottom: 65px;
+  }
+
+  &__card {
+    position: relative;
+    box-shadow: -4px 4px 19px 0px #75777126;
+    background-color: $colorWhite;
+    @include flex-column;
+    border-radius: 24px;
+  }
+
+  &__block {
+    padding: 16px 16px 64px;
+  }
+
+  &__group-one {
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    h3 {
+      font-weight: $fontWeightSemiBold;
+    }
+  }
+
+  &__heart {
+    margin: 0;
+  }
+
+  &__bottles {
+    font-weight: $fontWeightSemiBold;
+    padding: 8px;
+    color: $colorWhite;
+    background-color: $colorPink;
+    width: fit-content;
+    border-radius: 100px;
+    margin-bottom: 17px;
+
+    &_color {
+      background-color: $colorOrangeTwo;
+    }
+  }
+
+  &__price {
+    span {
+      font-weight: $fontWeightSemiBold;
+    }
+  }
+
+  &__list {
+    padding-top: 16px;
+    border-top: 1px solid $colorGreenTwo;
+    @include flex-column;
+    @include gap(24px);
+  }
+
+  &__item {
+    font-family: "Montserrat Alternates", sans-serif;
+    @include flex-row;
+    justify-content: space-between;
+
+    &-one {
+      @include flex-column;
+      @include gap(4px);
+      align-items: end;
+
+      span {
+        font-weight: $fontWeightRegular;
+      }
+    }
+  }
+
+  &__icons {
+    @include flex-row;
+    @include gap(9px);
+  }
+
+  &__btn {
+    width: 100%;
+    bottom: -22px;
+    left: 10%;
+    position: absolute;
+    max-width: 300px;
+  }
+}
+
+
+.promo {
+  &__block {
+    overflow: hidden;
+    border-radius: 24px;
+    background-color: $colorGreenTwo;
+    @include flex-row;
+    justify-content: space-between;
+    padding-right: 76px;
+    position: relative;
+  }
+
+  &__group {
+    @include flex-column;
+    @include gap(24px);
+    padding: 56px 0 56px 100px;
+
+    h3 {
+      color: $colorBlackFour;
+      font-weight: $fontWeightSemiBold;
+    }
+  }
+
+  &__img {
+    height: auto;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__ellipse-one, &__ellipse-two {
+    position: absolute;
+  }
+
+  &__ellipse-one {
+    top: 0;
+    right: 30%;
+  }
+
+  &__ellipse-two {
+    bottom: 0;
+    right: 0;
+  }
+}

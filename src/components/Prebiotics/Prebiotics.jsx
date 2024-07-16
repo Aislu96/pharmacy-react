@@ -7,6 +7,7 @@ import branchThree from '../../images/branchThree.svg';
 import branchFour from '../../images/branchFour.svg';
 import Button from "../Button/Button";
 import prebiotics from "../../utils/prebiotics";
+import SwiperControls from "../SwiperControls/SwiperControls";
 
 
 function Prebiotics() {
@@ -31,7 +32,7 @@ function Prebiotics() {
                 </div>
                 <div className="inner prebiotics__inner">
                     <div className="prebiotics__block">
-                        <span className="text-small text-circle prebiotics__text-circle">Ваш выбор</span>
+                        <span className="text-small text-circle">Ваш выбор</span>
                         <h2>Зачем пребиотики нужны вашему организму?</h2>
                         <Button href="/manual" className="button--accent">
                             Узнать больше о пребиотиках
@@ -58,10 +59,11 @@ function Prebiotics() {
                                     </div>))}
                             </div>
                         </div>
-                        <div className="prebiotics__swiper">
-                            <div className="swiper__button swiper__button_prev prebiotics__prev"></div>
-                            <div className="swiper__button swiper__button_next prebiotics__next"></div>
-                        </div>
+                        <SwiperControls
+                            prevClass="prebiotics__prev"
+                            nextClass="prebiotics__next"
+                            btnClass="swiper__btn_prebiotics"
+                        />
                     </div>
                 </div>
             </div>
