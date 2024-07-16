@@ -54,6 +54,12 @@
             background-image: url("../../images/video/biovestine.svg");
         }
     }
+    &__played {
+        padding: 4px 8px;
+        span {
+            font-weight: $fontWeightSemiBold;
+        }
+    }
 
     &__container-triangle {
         position: absolute;
