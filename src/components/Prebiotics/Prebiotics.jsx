@@ -3,11 +3,10 @@ import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 import './Prebiotics.scss';
 import {Navigation, Pagination} from "swiper/modules";
-
-
 import branchThree from '../../images/branchThree.svg';
 import branchFour from '../../images/branchFour.svg';
 import Button from "../Button/Button";
+import prebiotics from "../../utils/prebiotics";
 
 
 function Prebiotics() {
@@ -49,62 +48,14 @@ function Prebiotics() {
                     <div className="prebiotics__blocks">
                         <div className="swiper-prebiotics">
                             <div className="swiper-wrapper">
-                                <div className="prebiotics__slide swiper-slide">
-                                    <h3 className="p24">Повышение иммунитета</h3>
-                                    <p className="p16">Более 70% иммунных клеток организма сосредоточено в кишечнике.
-                                        Пребиотики поддерживают защитные функции, снижая риск инфекций.</p>
-                                    <div className="prebiotics__slide-img">
-                                        <img src={branchFour} alt="branchFour"/>
-                                    </div>
-                                </div>
-                                <div className="prebiotics__slide swiper-slide">
-                                    <h3 className="p24">Улучшение пищеварения</h3>
-                                    <p className="p16">Пребиотики стимулируют выработку пищеварительных ферментов,
-                                        облегчая
-                                        процессы переваривания и усвоения питательных веществ.</p>
-                                    <div className="prebiotics__slide-img">
-                                        <img src={branchFour} alt="branchFour"/>
-                                    </div>
-                                </div>
-                                <div className="prebiotics__slide swiper-slide">
-                                    <h3 className="p24">Нормализуют вес</h3>
-                                    <p className="p16">За счёт изменения состава микрофлоры восстанавливают правильный
-                                        обмен
-                                        веществ, что помогает быстрее достичь оптимального веса согласно конституции
-                                        человека.</p>
-                                    <div className="prebiotics__slide-img">
-                                        <img src={branchFour} alt="branchFour"/>
-                                    </div>
-                                </div>
-                                <div className="prebiotics__slide swiper-slide">
-                                    <h3 className="p24">От аллергии</h3>
-                                    <p className="p16">Снижают проницаемость кишечной стенки, препятствуют проникновению
-                                        в
-                                        кровь аллергенов, токсинов и патогенных бактерий. Снижают риск развития
-                                        аутоиммунных
-                                        заболеваний.</p>
-                                    <div className="prebiotics__slide-img">
-                                        <img src={branchFour} alt="branchFour"/>
-                                    </div>
-                                </div>
-                                <div className="prebiotics__slide swiper-slide">
-                                    <h3 className="p24">Выводят токсины</h3>
-                                    <p className="p16">Разрушают токсины, снижая их концентрацию в крови, тем самым
-                                        облегчают работу печени, снижают ощущение усталости и тяжести в правом
-                                        подреберье.</p>
-                                    <div className="prebiotics__slide-img">
-                                        <img src={branchFour} alt="branchFour"/>
-                                    </div>
-                                </div>
-                                <div className="prebiotics__slide swiper-slide">
-                                    <h3 className="p24">Поднимают настроение</h3>
-                                    <p className="p16">Комплексно воздействуют на организм. Улучшают общее самочувствие.
-                                        Повышают работоспособность, применяются в реабилитации после стресса и
-                                        депрессии.</p>
-                                    <div className="prebiotics__slide-img">
-                                        <img src={branchFour} alt="branchFour"/>
-                                    </div>
-                                </div>
+                                {prebiotics.map((prebiotic, id) => (
+                                    <div key={id} className="prebiotics__slide swiper-slide">
+                                        <h3 className="text-large">{prebiotic.title}</h3>
+                                        <p className="text-medium">{prebiotic.text}</p>
+                                        <div className="prebiotics__slide-img">
+                                            <img src={branchFour} alt="branchFour"/>
+                                        </div>
+                                    </div>))}
                             </div>
                         </div>
                         <div className="prebiotics__swiper">

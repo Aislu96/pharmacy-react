@@ -1,0 +1,197 @@
+@import "../../scss/vars";
+@import "../../scss/mixin";
+
+
+.present {
+  &__container {
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+
+    &_one {
+      bottom: 110px;
+      left: 0;
+    }
+
+    &_two {
+      bottom: 16px;
+      left: 0;
+    }
+
+    &_three {
+      transform: scaleX(-1) rotate(30deg);
+      top: 0;
+      right: 0;
+    }
+
+    &_four {
+      transform: scaleX(-1) rotate(22deg);
+      top: 190px;
+      right: -94px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    padding: 56px 44px 44px;
+    margin: 83px auto;
+    max-width: 649px;
+    background-color: $colorWhite;
+    border-radius: 24px;
+    @include flex-column;
+    @include gap(32px);
+  }
+
+  &__checkboxs {
+    display: grid;
+    gap: 8px 44px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__img {
+    position: absolute;
+    background-color: $colorGreenTwo;
+    width: 120px;
+    height: 120px;
+    @include flex-center;
+    border-radius: 100px;
+    top: -68px;
+    right: 29px;
+
+    img {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    & input[type="checkbox"] {
+      flex-shrink: 0;
+      margin: 3px;
+      width: 18px;
+      height: 18px;
+      border-radius: 2px;
+      border: 2px solid $colorBlackFive;
+      background-color: $colorWhite;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      outline: none;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    & input[type="checkbox"]:checked {
+      border: 0;
+      background-color: $colorOrange;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 11px;
+        height: 6px;
+        border-left: 2px solid $colorWhite;
+        border-bottom: 2px solid $colorWhite;
+        transform: rotate(-45deg) translateY(2px);
+        position: absolute;
+        top: 2px;
+        left: 1px;
+        transform-origin: center center;
+        transform-box: fill-box;
+      }
+    }
+
+    label {
+      cursor: pointer;
+      font-weight: $fontWeightRegular;
+    }
+  }
+
+  &__form {
+    @include flex-column;
+    @include gap(8px);
+
+    label {
+      font-weight: $fontWeightSemiBold;
+      color: $colorBlackFour;
+    }
+  }
+
+  &__form {
+    @include flex-column;
+    @include gap(8px);
+
+    label {
+      font-weight: $fontWeightSemiBold;
+      color: $colorBlackFour;
+    }
+  }
+
+  &__message-error {
+    height: 17.06px;
+    color: $colorBlackFive;
+  }
+}
+
+.input-container {
+  position: relative;
+  border: 1px solid $colorGreenTwo;
+  border-radius: 16px;
+
+  input {
+    width: 90%;
+    color: $colorBlackThree;
+    margin: 10px 16px;
+    box-sizing: border-box;
+    font-weight: $fontWeightRegular;
+    caret-color: transparent;
+
+    &:focus {
+      & + .input-container {
+        border-color: $colorGreenSix;
+      }
+
+      border-left: 2px solid $colorBlackThree;
+    }
+
+    &.has-text:focus {
+      border-left: none;
+    }
+
+    &.has-text {
+      border-left: none;
+
+      + .input-container {
+        border-color: $colorGreen;
+      }
+
+      + .present__cross {
+        svg {
+          fill: $colorBlackFive;
+        }
+      }
+    }
+  }
+}
+
+.present__cross {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  object-fit: cover;
+  z-index: 1;
+  cursor: pointer;
+
+  svg {
+    width: 10px;
+    height: 10px;
+    fill: $colorGreyFour;
+  }
+}

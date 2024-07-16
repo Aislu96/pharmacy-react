@@ -153,10 +153,52 @@ h2 {
 }
 
 
-.questions__swiper {
+.swiper__btn {
   justify-content: center;
   z-index: 1;
   @include flex-row;
   position: relative;
   height: 44px;
+  &_questions {
+    justify-content: center;
+    z-index: 1;
+    @include flex-row;
+    position: relative;
+    margin-bottom: 51px;
+    margin-top: 32px;
+    height: 44px;
+  }
+  &_prebiotisc {
+    margin: 24px 0 16px;
+    gap: 56px;
+  }
+}
+
+
+
+.pagination {
+  width: max-content !important;
+  @include flex-row;
+  align-items: center;
+
+  &__action {
+    font-weight: $fontWeightSemiBold !important;
+    text-decoration: underline;
+  }
+
+  span {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 24px;
+    color: #272625;
+    background-color: transparent;
+    border: 0;
+    padding: 12px 10px;
+    margin: 0;
+    border-radius: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

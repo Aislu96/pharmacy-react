@@ -1,0 +1,115 @@
+@import "../../scss/vars";
+@import "../../scss/mixin";
+
+.questions {
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    padding-top: 34px;
+    padding-bottom: 0;
+    background-color: $colorGreenTwo;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__arrow {
+    background-image: url("../../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 14px;
+    height: 6px;
+    transition: transform 0.3s;
+  }
+
+  &__group {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 24px;
+    cursor: pointer;
+
+    p {
+      font-weight: $fontWeightSemiBold;
+    }
+  }
+
+  &__body {
+    background-color: $colorYellow;
+    padding: 16px 24px 16px 180px;
+    border-radius: 0 0 24px 24px;
+    display: none;
+
+    p {
+      font-weight: $fontWeightRegular;
+    }
+  }
+
+  &__blocks {
+    max-width: 820px;
+    @include flex-column;
+    @include gap(3px);
+  }
+
+  &__block {
+    position: relative;
+    z-index: 1;
+    border-radius: 24px;
+    border: 1px solid transparent;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF) padding-box,
+    linear-gradient(180deg, #E9E5FF 0%, #FFFFFF 100%) border-box;
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + .questions__group {
+      justify-content: space-around;
+    }
+
+    &:checked + .questions__group + .questions__body {
+      display: block;
+    }
+
+    &:checked + .questions__group .questions__arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  h2 {
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    z-index: 1;
+    @include flex-column;
+    @include gap(24px);
+    position: absolute;
+    bottom: 54px;
+    right: 40px;
+    max-width: 295px;
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 0;
+
+    &_one {
+      right: -25px;
+      top: 119px;
+    }
+
+    &_two {
+      transform: scaleX(-1) rotate(158deg);
+      left: -219px;
+      bottom: 1px;
+    }
+  }
+
+  .swiper {
+    max-width: 820px;
+    margin: 0;
+  }
+}

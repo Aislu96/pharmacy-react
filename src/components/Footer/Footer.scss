@@ -2,6 +2,7 @@
 @import "../../scss/mixin";
 
 .footer {
+  margin-top: 16px;
   &__inner {
     @include flex-column;
     @include gap(34px);

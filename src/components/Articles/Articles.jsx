@@ -6,6 +6,7 @@ import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 import {useEffect} from "react";
 import {Navigation, Pagination} from "swiper/modules";
+import SwiperControls from "../SwiperControls/SwiperControls";
 
 
 function Articles() {
@@ -17,15 +18,16 @@ function Articles() {
             slidesPerView: 3.1,
             spaceBetween: 0,
             pagination: {
-                el: ".articles__pagination",
-                bulletActiveClass: "articles__pagination-action",
-                bulletClass: "articles__pagination-bullet",
+                el: ".pagination__articles",
+                bulletActiveClass: "pagination__action",
+                bulletClass: "pagination__bullet",
                 clickable: true,
                 renderBullet: function (index, className) {
                     // return '<span class="' + className + '">' + (index + 1) + '</span>';
                     if(index < 3) {
                         return "<span class=\"" + className + "\">" + (index + 1) + "</span>";
                     } else if (index === 3){
+                        // eslint-disable-next-line no-useless-concat
                         return "<span class=\"" + className + "\">" + "..." + "</span>";
                     } else {
                         return "";
@@ -49,11 +51,11 @@ function Articles() {
                     <span className="text-circle text-small">Научная база</span>
                     <div className="articles__group">
                         <h2>Статьи и диссертации</h2>
-                        <div className="questions__swiper">
-                            <div className="swiper__button swiper__button_prev articles__prev"></div>
-                            <div className="articles articles__pagination text-small"></div>
-                            <div className="swiper__button swiper__button_next articles__next"></div>
-                        </div>
+                        <SwiperControls
+                            prevClass="articles__prev"
+                            nextClass="articles__next"
+                            paginationClass="pagination__articles"
+                        />
                     </div>
                     <div className="articles__swiper">
                         <div className="articles__blocks swiper-wrapper">
