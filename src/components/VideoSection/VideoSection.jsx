@@ -24,12 +24,18 @@ const VideoSection = () => {
     }, []);
 
     const handleVideoBannerClick = () => {
+        console.log(videoPlay);
         setVideoPlay(!videoPlay);
     };
 
     const handleVideoClick = (video) => {
-        setActiveVideo(video);
-        setVideoPlay(!videoPlay);
+        if (video === activeVideo) {
+            setVideoPlay(!videoPlay);
+            setActiveVideo(video);
+        } else {
+            setActiveVideo(video);
+            setVideoPlay(true);
+        }
     };
 
     const getVideoUrlWithAutoplay = (url) => {
@@ -41,12 +47,14 @@ const VideoSection = () => {
             <div className="container video__container">
                 <div className="inner video__inner">
                     <div className="video__block">
-                        <span className="text-small text-circle prebiotics__text-circle">Ответы наших специалистов</span>
+                        <span
+                            className="text-small text-circle prebiotics__text-circle">Ответы наших специалистов</span>
                         <h2>Как работает Биовестин?</h2>
                         <div className="video__banner" onClick={handleVideoBannerClick}>
-                            <div className={`video__container-triangle ${videoPlay ? "video__container-triangle_non-active" : ''}`}>
+                            <div
+                                className={`video__container-triangle ${videoPlay ? "video__container-triangle_non-active" : ''}`}>
                                 <div className="video__container-img">
-                                    <img src={triangle} alt="Triangle" />
+                                    <img src={triangle} alt="Triangle"/>
                                 </div>
                             </div>
                             <iframe
@@ -68,14 +76,17 @@ const VideoSection = () => {
                                     <div className="video__banners swiper-wrapper">
                                         {videos.map((video, index) => (
                                             <div
-                                                className="video__banner-group swiper-slide"
+                                                className={video === activeVideo && videoPlay ? 'video__banner-group swiper-slide video__banner-group_hover' : 'video__banner-group swiper-slide'}
                                                 key={index}
-                                                onClick={() => handleVideoClick(video)}
-                                            >
+                                                onClick={() => handleVideoClick(video)}>
                                                 <div className="video__banner video__banner_one">
-                                                    <div className="vidio__played"><span className='text-small'>Воспроизводится</span></div>
+                                                    <div
+                                                        className={video === activeVideo && videoPlay ? 'video__played' : 'video__played video__played_active'}>
+                                                        <span className='text-small'>Воспроизводится</span></div>
                                                     <div className="video__container-img video__container-img_one">
-                                                        <img src={video === activeVideo && videoPlay ? video.srcPlay : video.src} alt="Triangle"/>
+                                                        <img
+                                                            src={video === activeVideo && videoPlay ? video.srcPlay : video.src}
+                                                            alt="Triangle"/>
                                                     </div>
                                                     <iframe
                                                         className="video__play-one"
@@ -83,7 +94,7 @@ const VideoSection = () => {
                                                         height="148px"
                                                         src={video.video}
                                                         allowFullScreen
-                                                        title={activeVideo.title}
+                                                        title={video.title} // Используйте video.title, а не activeVideo.title
                                                     ></iframe>
                                                 </div>
                                                 <p className="text-small">Важно знать</p>
@@ -111,11 +122,15 @@ const VideoSection = () => {
                         <div className="video__groups-two">
                             <div className="video__group-two">
                                 <span className="text-small text-circle video__text-circle">Мгновенное действие</span>
-                                <p className="text-small">В отличие от сухих в капсулах и порошках, начинают действовать мгновенно. Быстро снимают острые расстройства ЖКТ, нормализуют пищеварение, благотворно влияют на иммунитет и общее самочувствие.</p>
+                                <p className="text-small">В отличие от сухих в капсулах и порошках, начинают действовать
+                                    мгновенно. Быстро снимают острые расстройства ЖКТ, нормализуют пищеварение,
+                                    благотворно влияют на иммунитет и общее самочувствие.</p>
                             </div>
                             <div className="video__group-two">
-                                <span className="text-small text-circle prebiotics__text-circle">Здоровье микрофлоры</span>
-                                <p className="text-small">Регулярный приём «Биовестина» курсами 4-6 недель раз в квартал помогает поддерживать здоровье микрофлоры и организма в целом.</p>
+                                <span
+                                    className="text-small text-circle prebiotics__text-circle">Здоровье микрофлоры</span>
+                                <p className="text-small">Регулярный приём «Биовестина» курсами 4-6 недель раз в квартал
+                                    помогает поддерживать здоровье микрофлоры и организма в целом.</p>
                             </div>
                         </div>
                     </div>

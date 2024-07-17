@@ -59,12 +59,12 @@ function Prebiotics() {
                                     </div>))}
                             </div>
                         </div>
-                        <SwiperControls
-                            prevClass="prebiotics__prev"
-                            nextClass="prebiotics__next"
-                            btnClass="swiper__btn_prebiotics"
-                        />
                     </div>
+                    <SwiperControls
+                        prevClass="prebiotics__prev"
+                        nextClass="prebiotics__next"
+                        btnClass="swiper__btn_prebiotics"
+                    />
                 </div>
             </div>
         </section>

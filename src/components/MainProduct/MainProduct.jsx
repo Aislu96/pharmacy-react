@@ -109,7 +109,7 @@ const MainProduct = React.forwardRef((props, ref) => {
                     <div className="promo__block">
                         <div className="promo__group">
                             <h3 className="text-extra-large">Какой “Биовестин” следует выбрать?</h3>
-                            <Button to="contacts" className="button button--accent promo__button">
+                            <Button to="contacts" className="button button--highlight promo__button">
                                 Получить консультацию
                             </Button>
                         </div>

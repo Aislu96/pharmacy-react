@@ -43,7 +43,10 @@
                 padding: 5.5px 10px;
             }
 
-            &:active {
+            &:hover {
+                border: 3px solid $colorGreen;
+            }
+            &_hover {
                 border: 3px solid $colorGreen;
             }
         }
@@ -55,9 +58,20 @@
         }
     }
     &__played {
+        position: relative;
+        top: 9px;
+        left: 9px;
+        width: max-content;
+        @include borderBtn;
+        @include flex-center;
+        border: 1px solid $colorWhite;
+        background-color: $colorWhiteTwo;
         padding: 4px 8px;
         span {
             font-weight: $fontWeightSemiBold;
+        }
+        &_active {
+            display: none;
         }
     }
 
